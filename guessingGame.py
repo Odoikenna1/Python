@@ -1,14 +1,19 @@
 #number guessing game
 
-CORRECTNUMBER = 9
+import random
 
-for n in range(3):
+LUCKY_NUMBER = random.randrange(1,10)
+
+userInput = 0
+
+while userInput != LUCKY_NUMBER:
 	userInput = int(input("Enter a number between 1 - 10 (You have 3 chances only): "))
-	if userInput == DEFAULT:
-		print("You won",)
+	if userInput == LUCKY_NUMBER:
+		print("You won")
 		break
-	if userInput != DEFAULT:
+	else:
 		print("Failed, Try again")
+	
 
 
 
